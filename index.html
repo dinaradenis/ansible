@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Dinara Denis, DN Dev" />
+    <meta name="author" content="Dinara Denis" />
+    <meta name="keywords" content="DN Dev, Dinara Denis">
+    <link rel="icon" href="DN_Logo.png" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #242424;
+            font-family: 'Comfortaa', cursive;
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .section {
+            min-width: 100vw;
+            height: auto;
+            padding: 100px 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            background-color: #242424;
+            overflow: auto;
+        }
+
+        #product {
+        padding-bottom: 50px; /* Extra space at the bottom for scrolling */
+        }
+
+        h1, p {
+            color: white;
+            text-align: center;
+        }
+
+        button {
+            font-family: 'Comfortaa', cursive;
+            padding: 12px 24px;
+            margin: 20px 0;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: #242424;
+            font-size: 18px;
+        }
+
+        #main button {
+            background-color: lightblue;
+        }
+
+        #product button {
+            background-color: lightcoral;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffcccb;
+            margin: 10px 0;
+            font-size: 18px;
+            display: block;
+            text-align: center;
+        }
+
+        button:hover {
+            opacity: 0.9;
+            transition: opacity 0.2s ease;
+        }
+
+        #product img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        .contact {
+            color: white;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 60px 10px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+
+            a {
+                font-size: 16px;
+            }
+        }
+    </style>
+    <title>DN Dev - Dinara Denis</title>
+</head>
+<body>
+
+<div class="container">
+    <div id="main" class="section">
+        <img src="DN_Logo.png" alt="Dinara Denis hero image" style="border-radius: 5%; max-width: 200px;"/>
+        <h1>Dinara Denis</h1>
+        <p>A developer, working on websites, apps, and games.</p>
+        <div class="contact">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:dinara@dinaradenis.xyz" style="color: lightblue;">dinara@dinaradenis.xyz</a></p>
+        </div>
+        <button id="goToProduct">Check out my creation!</button>
+    </div>
+
+    <div id="product" class="section">
+        <img src="DN_Utility_Round.png" alt="DN Utility Logo" style="border-radius: 5%;max-width: 100px;"/>
+        <h1>DN Utility</h1>
+        <p>DN Utility is a simple app to check your device status easily.</p>
+        <a href="https://www.amazon.com/DN-Studios-Utility/dp/B09VXNC64R" target="_blank">Amazon Appstore ></a>
+        <a href="https://galaxystore.samsung.com/detail/com.dinaradenis.dnutility" target="_blank">Samsung Galaxy Store ></a>
+        <a href="https://dn-dev.itch.io/dn-utility" target="_blank">itch.io ></a>
+        <br>
+        <img src="DN_Utility_1.png" alt="DN Utility Screenshot">
+        <button id="goToMain">Go back to main</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById('goToProduct').addEventListener('click', () => {
+        document.querySelector('.container').style.transform = 'translateX(-100vw)';
+    });
+
+    document.getElementById('goToMain').addEventListener('click', () => {
+        document.querySelector('.container').style.transform = 'translateX(0)';
+    });
+</script>
+
+</body>
+</html>
+
+<!-- Created by DINARA DENIS with help of CHATGPT:) -->
